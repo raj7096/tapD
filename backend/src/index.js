@@ -12,6 +12,10 @@ app.use(cors());
 app.use(userRouter);
 app.use(socialRouter);
 
+app.get("/", (req, res) => {
+  res.json({ Message: "In Index.js" });
+});
+
 app.listen(port, () => {
   console.log("Server Running on Port", port);
 });
